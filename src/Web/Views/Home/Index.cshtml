@@ -1,0 +1,25 @@
+﻿@model List<Spike.Jane.Blog.Web.Models.IndexViewModel>
+
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Posts</h1>
+    
+        <div class="row">
+            <span>ID</span>
+            <span>Date Posted</span>
+            <span>Title</span>
+        </div>
+
+        @foreach (var post in @Model)
+        {
+            <div class="row">
+                <span>@Html.ActionLink(@post.PostId.ToString(), "Post", "Home", new { postId=@post.PostId })</span>
+                <span>@post.DatePosted</span>
+                <span>@post.Title</span>
+            </div>
+        }
+
+</div>

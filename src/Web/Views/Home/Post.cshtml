@@ -1,0 +1,16 @@
+﻿@model Spike.Jane.Blog.Web.Models.PostViewModel
+
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Post</h1>
+    
+    <div class="post-item">
+        <img class="post-image" width="400" height="600" src="@Model.ImageUrl.ToString()" alt="">
+        <div class="post-categories">@Model.Categories</div>
+        <div class="post-title">@Model.Title</div>
+    </div>
+
+</div>
